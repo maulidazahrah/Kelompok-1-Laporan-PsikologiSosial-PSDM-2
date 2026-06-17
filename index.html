@@ -165,23 +165,49 @@
 <!-- Main Panel Area -->
 <div class="flex-1 flex flex-col h-full overflow-hidden">
     <!-- Top Navbar -->
-    <header class="h-16 bg-white border-b border-slate-200/80 px-6 flex items-center justify-between shrink-0 z-20">
+    <header class="h-16 bg-white border-b border-slate-200/80 px-6 flex items-center justify-between shrink-0 z-20 shadow-sm shadow-slate-100/30">
         <div class="flex items-center gap-3">
-            <button onclick="toggleSidebarMobile()" class="md:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-                <i class="fa-solid fa-bars"></i>
+            <button onclick="toggleSidebarMobile()" class="md:hidden p-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 rounded-lg transition-all">
+                <i class="fa-solid fa-bars text-lg"></i>
             </button>
             <div class="w-7 h-7 object-contain block">
                 <img src="https://i.imgur.com/TzjxUUp.png" alt="Logo UNNES" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/50x50/1e1b4b/38bdf8?text=UNNES';">
             </div>
             <h2 id="top-navbar-title" class="text-xs font-black text-slate-800 uppercase tracking-widest">Beranda &amp; Ringkasan </h2>
         </div>
+        
         <div class="flex items-center gap-4">
-            <div class="text-right hidden sm:block">
-                <p class="text-[10px] font-bold text-slate-800">Dosen Pengampu</p>
-                <p class="text-[9px] text-slate-500 font-semibold font-mono">All Fine Loretha, S.Pd., M.Pd. &amp; Indri Ajeng S., M.Pd.</p>
+            <!-- Dropdown Dosen Pengampu yang Premium -->
+            <div class="relative group hidden sm:block text-right">
+                <button class="focus:outline-none text-right flex flex-col items-end">
+                    <p class="text-[10px] font-black text-slate-800 uppercase tracking-wider flex items-center justify-end gap-1.5 group-hover:text-brand-600 transition-colors">
+                        Dosen Pengampu <i class="fa-solid fa-chevron-down text-[8px] text-slate-400 transition-transform group-hover:rotate-180"></i>
+                    </p>
+                    <p class="text-[9px] text-slate-500 font-bold font-mono">Multi-Mata Kuliah</p>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="absolute right-0 mt-2 w-72 bg-white border border-slate-200/80 rounded-2xl shadow-xl p-4 text-left opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 transform translate-y-1 group-hover:translate-y-0">
+                    <div class="space-y-4 text-[11px]">
+                        <div>
+                            <p class="font-black text-[9px] text-brand-600 uppercase tracking-widest mb-1.5 border-b border-brand-100 pb-1 flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>Psikologi Sosial
+                            </p>
+                            <p class="font-extrabold text-slate-850 leading-relaxed">All Fine Loretha, S.Pd., M.Pd.</p>
+                            <p class="font-extrabold text-slate-850 leading-relaxed">Indri Ajeng Setyoningrum, M.Pd.</p>
+                        </div>
+                        <div>
+                            <p class="font-black text-[9px] text-teal-600 uppercase tracking-widest mb-1.5 border-b border-teal-100 pb-1 flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>Pengembangan SDM (PSDM)
+                            </p>
+                            <p class="font-extrabold text-slate-850 leading-relaxed">Prof. Dr. Tri Joko Raharjo, M.Pd.</p>
+                            <p class="font-extrabold text-slate-850 leading-relaxed">Bagus Kisworo, S.Pd., M.Pd.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="h-8 w-px bg-slate-200"></div>
-            <div class="w-8 h-8 rounded-full bg-violet-50/80 border border-violet-100 text-violet-600 flex items-center justify-center font-black text-[10px]" title="Kelompok 1 PNF UNNES">
+            <div class="w-9 h-9 rounded-xl bg-brand-50 border border-brand-100 text-brand-600 flex items-center justify-center font-black text-[11px] shadow-sm" title="Kelompok 1 PNF UNNES">
                 K1
             </div>
         </div>
